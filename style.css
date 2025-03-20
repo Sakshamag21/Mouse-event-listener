@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .mouse-event {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    color: #fff;
+    font-size: 24px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+  
+  h4 {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #dfe6e9;
+  }
+  
+  #trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .trail {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    animation: fadeOut 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+  
+  #click-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff4757;
+    color: white;
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
